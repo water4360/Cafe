@@ -2,9 +2,8 @@ package com.soob.ui;
 
 import java.util.Scanner;
 
-public class CafeUI extends BaseUI{
+public class CafeUI extends BaseUI {
 	
-	int select;
 
 	public int menu() {
 		
@@ -19,26 +18,26 @@ public class CafeUI extends BaseUI{
 		System.out.print("메뉴를 고르세요 >> ");
 		
 		Scanner sc = new Scanner(System.in);
-		return select = Integer.parseInt(sc.nextLine());
+		return Integer.parseInt(sc.nextLine());
 		
 	}
 	
 	@Override
-	public void execute() {
+	public void execute() throws Exception{
 		
 		while(true) {
 			switch(menu()) {
 			case 1 :
 				System.out.println("<전체주문 조회>");
-//				new OrderEntireUI().execute();
+				new OrderEntireUI().execute();
 				break;
 			case 2 :
-				System.out.println("<주문번호 조회>");
-//				new OrderCheckUI().execute();
+				System.out.println("<현재주문 조회>");
+				new OrderCheckUI().execute();
 				break;
 			case 3 :
 				System.out.println("<메뉴 주문>");
-//				new OrderUI().execute();
+				new OrderUI().execute();
 				break;
 			case 4 :
 				System.out.println("<주문 수정>");
