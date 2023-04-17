@@ -1,6 +1,6 @@
 package com.soob.ui;
 
-public class ExitUI {
+public class ExitUI extends BaseUI {
 
 	public void execute() throws Exception{
 		System.out.println("--------------------------------------");
